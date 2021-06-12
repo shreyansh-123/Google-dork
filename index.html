@@ -42,6 +42,7 @@
              display: flex;
     flex-wrap: wrap;
             text-align: center;
+            border-bottom: 2px solid lime;
         }
         .list
         {
@@ -53,7 +54,60 @@
     align-items: center;
             padding-top: 16px;
         }
-        
+        .footer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        a
+        {
+            color: orangered;
+            text-decoration: none;
+        }
+        list:visited {
+  color: orange;
+  text-decoration: none;
+}
+        .cool-link {
+    display: inline-block;
+            margin-top: 20px;
+            margin-left: 50px;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #7e7777;
+    transition: width .3s;
+}
+.text
+        {
+            text-align: center;
+        }
+.cool-link:hover::after {
+    width: 100%;
+}
+        .cool-links
+        {
+            border-bottom: 1px solid orange;
+        }
+        .email
+        {
+            font-size: 18px;
+        }
+        .bartext
+        {
+            font-size: 35px;
+        }
+        @media screen and (min-width: 620px) {
+  .cool-link, .cool-linkss {
+      font-size: 20px;
+  }
     </style>
     <body>
         
@@ -109,9 +163,19 @@
             </div>
 -->
         </div>
-        <footer>
-                <p class="footer" style="display: flex; justify-content: center; align-items: center; text-align: center; color: orange; margin-top: 10px;">Copyright 2021 shreyansh</p>
-            </footer>
+         <footer class="wrapper footer-wrapper">
+				<div class="container-fluid">
+					<div class="text">
+						<div class="footer-social">
+							<a class="cool-link" href="https://twitter.com/alienufo10" target="_blank">Twitter</a>
+							<a  class="cool-link" href="https://www.instagram.com/shreyansh.js/" target="_blank">Instagram</a>
+							<a class="cool-link" href="https://www.linkedin.com/in/shreyansh/" target="_blank">Linkedin</a>
+							<a class="cool-link" href="https://shreyanshp.herokuapp.com" target="_blank">About Me</a>
+						</div>
+						<p style="color: lime;" class="footer-copyright">© Copyright 2021 - Shreyansh</p>
+					</div>
+				</div>
+			</footer>
     </body>
     </head>
     <script>
